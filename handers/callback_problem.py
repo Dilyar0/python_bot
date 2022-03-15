@@ -2,11 +2,12 @@ from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from bot_instance import bot
 
+
 async def problem_2(call: types.CallbackQuery):
-    markup2 = InlineKeyboardMarkup()
+    markup = InlineKeyboardMarkup()
     button_call_2 = InlineKeyboardButton("след. задача",
                                          callback_data="button_call_2")
-    markup2.add(button_call_2)
+    markup.add(button_call_2)
     question = "Output:"
     answer = ["1", "2", "3", "4", "5", "6", "7"]
     photo = open("media/problems/problem_2.jpg", "rb")
@@ -18,8 +19,9 @@ async def problem_2(call: types.CallbackQuery):
         correct_option_id=2,
         is_anonymous=False,
         type="quiz",
-        reply_markup=markup2
+        reply_markup=markup
     )
+
 
 async def problem_3(call: types.CallbackQuery):
     question = "Output"

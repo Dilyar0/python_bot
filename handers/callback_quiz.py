@@ -38,6 +38,7 @@ async def quiz_3(call: types.CallbackQuery):
         explanation_parse_mode=ParseMode.MARKDOWN_V2
     )
 
+
 def register_handler_callback_quiz(dp: Dispatcher):
     dp.register_callback_query_handler(quiz_2, lambda fun: fun.data == "button_1")
     dp.register_callback_query_handler(quiz_3, lambda fun: fun.data == "button_2")

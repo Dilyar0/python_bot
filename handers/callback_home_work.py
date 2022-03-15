@@ -1,11 +1,11 @@
 from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from bot_instance import bot
-
+from keybords import keybord
 
 
 async def answer_yes(call: types.CallbackQuery):
-    photo = open("media/home_work_images/answers.jpg", "")
+    photo = open("media/home_work_images/answers.jpg", "rd")
     question = "Угадай ..."
     answers = ["A", "B", "C"]
     markup = InlineKeyboardMarkup()
