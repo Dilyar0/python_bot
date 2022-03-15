@@ -30,25 +30,24 @@ async def problem_1(message: types.Message):
         reply_markup=markup)
 
 
-# -----------------HOME WORK-------------------------------------------------------------------------
+# -----------------HARRY POTTER-------------------------------------------------------------------------
 async def harry_potter_1(message: types.Message):
-    async def car_quiz(message: types.Message):
-        question = "guess the character from harry potter"
-        answer = ["Christian Coulson", "Frank Bryce", "Sirius Black", "Harry Potter"]
-        photo = open("media/harry_potter_character/Christian_Coulson_as_Tom_Riddle.jpg", "rb")
-        markup = InlineKeyboardMarkup()
-        button_harrys = InlineKeyboardButton("Следующий", callback_data="button_harrys_1")
-        markup.add(button_harrys)
-        await bot.send_photo(message.chat.id, photo=photo)
-        await bot.send_poll(
-            message.chat.id,
-            question=question,
-            options=answer,
-            correct_option_id=1,
-            is_anonymous=False,
-            type="quiz",
-            reply_markup=markup,
-        )
+    question = "guess the character from harry potter"
+    answer = ["Christian Coulson", "Frank Bryce", "Sirius Black", "Harry Potter"]
+    photo = open("media/harry_potter_character/Christian_Coulson_as_Tom_Riddle.jpg", "rb")
+    markup = InlineKeyboardMarkup()
+    button_harrys = InlineKeyboardButton("Следующий", callback_data="button_harrys_1")
+    markup.add(button_harrys)
+    await bot.send_photo(message.chat.id, photo=photo)
+    await bot.send_poll(
+        message.chat.id,
+        question=question,
+        options=answer,
+        correct_option_id=1,
+        is_anonymous=False,
+        type="quiz",
+        reply_markup=markup,
+    )
 
 
 #==========QUIZ=========================================================================
