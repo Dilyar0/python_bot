@@ -9,7 +9,6 @@ async def hello(message: types.Message):
                            f"Hello my master, {message.from_user.full_name}",
                            reply_markup=keybord.keyboardStat)
 
-
 #======================PROBLEMS====================================================================
 async def problem_1(message: types.Message):
     markup = InlineKeyboardMarkup()

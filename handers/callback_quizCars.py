@@ -34,7 +34,7 @@ async def car_select_3(call: types.CallbackQuery):
         call.message.chat.id,
         question=question,
         options=answers,
-        correct_option_id=3,
+        correct_option_id=2,
         is_anonymous=False,
         type="quiz",
         reply_markup=markup
