@@ -55,7 +55,7 @@ async def load_description(message: types.Message,
 
 def register_handler_fsmadmin(dp: Dispatcher):
     dp.register_message_handler(is_admin_func, commands=["admin"], is_chat_admin=True)
-    dp.register_message_handler(fsm_start, commands=["dowload"], state=None )
+    dp.register_message_handler(fsm_start, commands=["dowload"], state=None)
     dp.register_message_handler(load_photo, content_types=["photo"], state=FSMADMIN.photo)
     dp.register_message_handler(load_title, content_types=["title"], state=FSMADMIN.title)
     dp.register_message_handler(load_description, content_types=[""], state=FSMADMIN.title)
