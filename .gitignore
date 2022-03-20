@@ -3,3 +3,5 @@ __pycache__
 media
 .env
 venv
+bot.sqlite3
+users.sqlite3
