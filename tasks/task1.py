@@ -11,7 +11,7 @@ def better_then_average(class_points, your_points):
     else:
         return False
 
-better_then_average(class_points=[2, 3, 100, 40, 60], you_points=70)
+# better_then_average(class_points=[2, 3, 100, 40, 60], you_points=70)
 #========================================================================================================================
 """
 Вы решили арендовать машину , Арендатель вам говорит
@@ -21,10 +21,15 @@ better_then_average(class_points=[2, 3, 100, 40, 60], you_points=70)
 """
 
 def seishely(d):
-    return
+    if d >= 7:
+        return (d * 40) - 50
+    elif d > 3 and d < 7:
+        return (d * 40) - 20
+    else:
+        pass
 
 day_1 = 1
 day_2 = 4
 day_3 = 8
 
-seishely(day_3)
+print(seishely(day_3))
