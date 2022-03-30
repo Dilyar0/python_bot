@@ -34,7 +34,7 @@ async def quiz_3(call: types.CallbackQuery):
         type="quiz",
         correct_option_id=0,
         open_period=10,
-        explanation="Father C++",
+        explanation="Father C",
         explanation_parse_mode=ParseMode.MARKDOWN_V2
     )
 

@@ -14,6 +14,7 @@ class FSMUSER(StatesGroup):
     lastName = State()
 
 
+
 async def greeteng_user(message: types.Message):
     markup = InlineKeyboardMarkup()
     button_start_register = InlineKeyboardButton("continue", callback_data="user_id")
@@ -52,6 +53,6 @@ async def last_name(message: types.Message, state: FSMContext):
 def register_handler_fsmuser(dp: Dispatcher):
     dp.register_message_handler(greeteng_user, commands=["start_register"])
     dp.register_callback_query_handler(user_id, lambda fun: fun.data == "user_id")
-    dp.register_message_handler(user_name, command=["user_user"])
+    dp.register_message_handler(user_name, commands=["user_user"])
     dp.register_message_handler(first_name, commands=["first_name"])
     dp.register_message_handler(last_name, commands=["last_name"])

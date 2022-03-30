@@ -1,6 +1,6 @@
 from aiogram import executor, types, bot
 from bot_instance import dp
-from handers import client,extra ,callback_quiz, callback_problem, callback_home_work, callback_quizCars, callback_harry_potter, fsmadmin, fsmAdminGetPerson, notification
+from handers import client, extra ,callback_quiz, callback_problem, callback_home_work, callback_quizCars, callback_harry_potter, fsmadmin, fsmUser, notification
 from database import bot_db, user_db
 import asyncio
 from handers.notification import scheduler
@@ -8,14 +8,15 @@ from handers.notification import scheduler
 
 async def on_startup(_):
     bot_db.sql_create()
+    user_db.sql_create_user()
     asyncio.create_task(scheduler())
     print("bot is online")
 
+client.register_handlers_client(dp)
+
 notification.register_handler_notification(dp)
 fsmadmin.register_handler_fsmadmin(dp)
-fsmAdminGetPerson.register_handler_fsmuser(dp)
-
-client.register_handlers_client(dp)
+fsmUser.register_handler_fsmuser(dp)
 
 callback_quiz.register_handler_callback_quiz(dp)
 callback_problem.register_handlers_callback_problem(dp)
