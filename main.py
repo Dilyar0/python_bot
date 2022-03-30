@@ -1,6 +1,6 @@
 from aiogram import executor, types, bot
 from bot_instance import dp
-from handers import client, extra ,callback_quiz, callback_problem, callback_home_work, callback_quizCars, callback_harry_potter, fsmadmin, fsmUser, notification
+from handers import client, extra ,callback_quiz, callback_problem, callback_home_work, callback_quizCars, callback_harry_potter, fsmadmin, fsmUser, notification, inline
 from database import bot_db, user_db
 import asyncio
 from handers.notification import scheduler
@@ -23,7 +23,7 @@ callback_problem.register_handlers_callback_problem(dp)
 callback_home_work.register_handlers_callback_homeWork(dp)
 callback_quizCars.register_handlers_callback_homeWork(dp)
 callback_harry_potter.register_handlers_callback_homeWork(dp)
-
+inline.register_handler_inline(dp)
 extra.register_handlers_extra(dp)
 
 
